@@ -331,6 +331,192 @@
     },
     {
       "cell_type": "code",
+      "source": [
+        "!git init"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "Reinitialized existing Git repository in /mnt/batch/tasks/shared/LS_root/mounts/clusters/abhiramprasad20041/code/Users/abhiramprasad2004/.git/\r\n"
+        }
+      ],
+      "execution_count": 22,
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git add ."
+      ],
+      "outputs": [],
+      "execution_count": 23,
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git config --global user.name \"Lolan04\"\n",
+        "!git config --global user.email \"abhiramprasad2004@gmail.com\""
+      ],
+      "outputs": [],
+      "execution_count": 24,
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git commit -m \"Initial commit: added project files and organized structure\""
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "[master (root-commit) 672653a] Initial commit: added project files and organized structure\r\n 5 files changed, 788 insertions(+)\r\n create mode 100644 .amlignore\r\n create mode 100644 .amlignore.amltmp\r\n create mode 100644 .ipynb_aml_checkpoints/test-checkpoint2026-5-7-5-24-7Z.ipynb\r\n create mode 100644 test.ipynb\r\n create mode 100644 test.ipynb.amltmp\r\n"
+        }
+      ],
+      "execution_count": 25,
+      "metadata": {}
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "nteract": {
+          "transient": {
+            "deleting": false
+          }
+        }
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git status"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "On branch master\r\nnothing to commit, working tree clean\r\n"
+        }
+      ],
+      "execution_count": 26,
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git remote add origin https://github.com/Lolan04/AI-ML.git"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "error: remote origin already exists.\r\n"
+        }
+      ],
+      "execution_count": 32,
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git remote -v"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "origin\thttps://github.com/Lolan04/AI/ML.git (fetch)\r\norigin\thttps://github.com/Lolan04/AI/ML.git (push)\r\n"
+        }
+      ],
+      "execution_count": 33,
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git remote remove origin"
+      ],
+      "outputs": [],
+      "execution_count": 34,
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git remote -v"
+      ],
+      "outputs": [],
+      "execution_count": 35,
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git remote add origin https://github.com/Lolan04/AI-ML.git"
+      ],
+      "outputs": [],
+      "execution_count": 36,
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "git push -u origin main"
+      ],
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (4261689527.py, line 1)",
+          "traceback": [
+            "\u001b[0;36m  Cell \u001b[0;32mIn[37], line 1\u001b[0;36m\u001b[0m\n\u001b[0;31m    git push -u origin main\u001b[0m\n\u001b[0m        ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ],
+      "execution_count": 37,
+      "metadata": {
+        "gather": {
+          "logged": 1780812681568
+        }
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git push -u origin main"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "error: src refspec main does not match any\r\n\u001b[31merror: failed to push some refs to 'https://github.com/Lolan04/AI-ML.git'\r\n\u001b[m"
+        }
+      ],
+      "execution_count": 38,
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git branch\n",
+        "!git status\n",
+        "!git log --oneline"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "* \u001b[32mmaster\u001b[m\nOn branch master\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git restore <file>...\" to discard changes in working directory)\n\t\u001b[31mmodified:   test.ipynb\u001b[m\n\t\u001b[31mmodified:   test.ipynb.amltmp\u001b[m\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\n\u001b[33m672653a\u001b[m\u001b[33m (\u001b[m\u001b[1;36mHEAD\u001b[m\u001b[33m -> \u001b[m\u001b[1;32mmaster\u001b[m\u001b[33m)\u001b[m Initial commit: added project files and organized structure\n"
+        }
+      ],
+      "execution_count": 39,
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
       "source": [],
       "outputs": [],
       "execution_count": null,
